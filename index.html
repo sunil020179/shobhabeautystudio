@@ -1,240 +1,282 @@
 <!DOCTYPE html>
-<html lang="hi">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Shobha Beauty Studio | मेकअप, स्किनकेयर और हेयर स्टाइलिंग</title>
-  <meta name="description" content="Shobha Beauty Studio - प्रोफेशनल मेकअप, स्किनकेयर, हेयर स्टाइलिंग और ब्राइडल सेवाएँ। अभी बुक करें!" />
-  <meta name="theme-color" content="#e11d48" />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Shobha Beauty Studio" />
-  <meta property="og:description" content="प्रोफेशनल मेकअप, स्किनकेयर, हेयर स्टाइलिंग और ब्राइडल सेवाएँ।" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://shobhabeautystudio.com" />
-  <meta property="og:image" content="https://shobhabeautystudio.com/cover.jpg" />
-
-  <style>
-    :root{
-      --brand:#e11d48;   /* rose-600 */
-      --brand-2:#be123c; /* rose-700 */
-      --bg:#0f172a;      /* slate-900 */
-      --text:#e5e7eb;    /* gray-200 */
-      --muted:#94a3b8;   /* slate-400 */
-      --card:#111827;    /* gray-900 */
-      --ring:#fb7185;    /* rose-400 */
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Ubuntu,'Noto Sans',Arial,sans-serif;background:var(--bg);color:var(--text);scroll-behavior:smooth}
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;display:block;border-radius:14px}
-    .container{max-width:1100px;margin:0 auto;padding:24px}
-    .btn{display:inline-block;padding:12px 18px;border-radius:14px;background:var(--brand);color:#fff;font-weight:600;border:2px solid transparent;transition:.2s}
-    .btn:hover{transform:translateY(-1px);background:var(--brand-2)}
-    .btn.outline{background:transparent;border-color:var(--ring);color:#fff}
-    .grid{display:grid;gap:18px}
-    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
-    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
-    @media (max-width:900px){.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
-    @media (max-width:640px){.grid-2,.grid-3{grid-template-columns:1fr}}
-    .card{background:var(--card);border:1px solid #1f2937;border-radius:16px;padding:18px}
-    header.nav{position:sticky;top:0;z-index:30;background:rgba(15,23,42,.7);backdrop-filter:blur(10px);border-bottom:1px solid #1f2937}
-    header .inner{display:flex;align-items:center;justify-content:space-between;padding:14px 24px}
-    .logo{display:flex;align-items:center;gap:10px;font-weight:800}
-    .logo span{background:var(--brand);display:inline-grid;place-items:center;color:#fff;border-radius:10px;width:36px;height:36px}
-    nav a{margin:0 10px;color:var(--muted)}
-    nav a:hover{color:#fff}
-    .hero{padding:64px 24px 32px;background:
-      radial-gradient(1000px 500px at 10% -10%, rgba(225,29,72,.25), transparent 60%),
-      radial-gradient(800px 400px at 90% -10%, rgba(190,18,60,.22), transparent 60%)}
-    .hero .wrap{display:grid;gap:24px;grid-template-columns:1.1fr .9fr}
-    .hero h1{font-size:clamp(28px,5vw,52px);line-height:1.1;margin:0}
-    .hero p{color:var(--muted);font-size:18px}
-    .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
-    .badge{display:inline-flex;align-items:center;gap:8px;border:1px solid #1f2937;background:#0b1222;color:#cbd5e1;padding:8px 12px;border-radius:999px;font-size:13px}
-    section{padding:48px 0}
-    h2.section-title{font-size:clamp(22px,3.5vw,32px);margin:0 0 16px}
-    .sub{color:var(--muted);margin:0 0 18px}
-    .service{display:flex;gap:14px}
-    .service i{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:#1f2937;color:#fff}
-    .gal img{aspect-ratio:1/1;object-fit:cover}
-    .contact-row{display:grid;gap:18px;grid-template-columns:1.2fr .8fr}
-    @media (max-width:820px){.hero .wrap{grid-template-columns:1fr}.contact-row{grid-template-columns:1fr}}
-    footer{padding:26px 0;color:#9aa4b2;border-top:1px solid #1f2937;text-align:center}
-    .chip{display:inline-flex;gap:8px;align-items:center;background:#0b1222;color:#cbd5e1;padding:8px 12px;border-radius:999px}
-    .muted{color:var(--muted)}
-    input,textarea{width:100%;background:#0b1222;border:1px solid #243244;color:#e5e7eb;padding:12px;border-radius:12px;outline:none}
-    input:focus,textarea:focus{border-color:#334155;box-shadow:0 0 0 3px rgba(251,113,133,.15)}
-    form .row{display:grid;gap:12px;grid-template-columns:1fr 1fr}
-    @media (max-width:640px){form .row{grid-template-columns:1fr}}
-    .map{border:0;border-radius:14px;width:100%;height:260px;filter:saturate(1.05) contrast(1.05)}
-    .floating-wa{position:fixed;right:18px;bottom:18px;z-index:40}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shobha Beauty Studio & Nails | Premium Beauty Salon in Bur Dubai</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: #FFFFFF;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .btn-gold {
+            background: linear-gradient(135deg, #C6A664, #D4B570);
+            color: #000000;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-gold:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(198, 166, 100, 0.6);
+        }
+        
+        .btn-outline {
+            border: 3px solid #C6A664;
+            color: #C6A664;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            background: transparent;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background: #C6A664;
+            color: #000000;
+            transform: translateY(-3px);
+        }
+    </style>
 </head>
+
 <body>
+    <!-- Professional Navigation -->
+    <nav class="bg-black border-b border-yellow-600 border-opacity-30 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logo Section -->
+                <div class="flex items-center space-x-4">
+                    <img 
+                        src="https://i.postimg.cc/YqtGN1NK/IMG-20250808-WA0128.jpg"
+                        alt="Shobha Beauty Studio & Nails Logo"
+                        class="h-16 w-16 object-contain rounded-xl bg-white bg-opacity-10 p-2"
+                    />
+                    <div>
+                        <h1 class="text-2xl font-bold text-white">Shobha Beauty Studio</h1>
+                        <p class="text-yellow-400 font-semibold">& Nails â€¢ Since 2011</p>
+                    </div>
+                </div>
 
-  <!-- ===== NAV ===== -->
-  <header class="nav">
-    <div class="inner container">
-      <div class="logo">
-        <span>SB</span> Shobha Beauty Studio
-      </div>
-      <nav>
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="container wrap">
-      <div>
-        <div class="badge">✨ Bridal • Party • Studio</div>
-        <h1>आपकी ब्यूटी, हमारा आर्ट — <span style="color:var(--ring)">Shobha Beauty Studio</span></h1>
-        <p>प्रोफेशनल मेकअप, स्किनकेयर और हेयर स्टाइलिंग — आपके हर खास मौके के लिए। ट्रायल बुक करें या सीधे WhatsApp पर बात करें।</p>
-        <div class="cta">
-          <a class="btn" href="https://wa.me/971000000000?text=Hi%20Shobha%20Beauty%20Studio%20-%20I%20want%20to%20book%20an%20appointment" target="_blank" rel="noopener">WhatsApp Booking</a>
-          <a class="btn outline" href="#gallery">View Gallery</a>
-        </div>
-        <p class="muted" style="margin-top:8px;">Open: 10am–8pm • All days | Call: <a href="tel:+971000000000">+971 00 000 0000</a></p>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1200&auto=format&fit=crop" alt="Makeup Artist working" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== SERVICES ===== -->
-  <section id="services">
-    <div class="container">
-      <h2 class="section-title">हमारी सेवाएँ</h2>
-      <p class="sub">Bridal makeover, party makeup, hair styling, skincare facials और भी बहुत कुछ।</p>
-      <div class="grid grid-3">
-        <div class="card service">
-          <i>💄</i>
-          <div>
-            <h3 style="margin:6px 0 6px">Bridal & Party Makeup</h3>
-            <p class="muted">HD/Traditional, waterproof finish और long-stay looks आपके big day के लिए।</p>
-          </div>
-        </div>
-        <div class="card service">
-          <i>💇‍♀️</i>
-          <div>
-            <h3 style="margin:6px 0 6px">Hair Styling</h3>
-            <p class="muted">Curls, buns, braids, smoothing—आपकी personality के अनुसार perfect style।</p>
-          </div>
-        </div>
-        <div class="card service">
-          <i>🧖‍♀️</i>
-          <div>
-            <h3 style="margin:6px 0 6px">Skincare & Facials</h3>
-            <p class="muted">Detan, clean-up, hydra glow facials—visible results के साथ gentle care।</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== GALLERY ===== -->
-  <section id="gallery">
-    <div class="container">
-      <h2 class="section-title">गैलरी</h2>
-      <p class="sub">हमारे हाल के काम की झलकियाँ—और देखने के लिए Instagram/WhatsApp पर connect करें।</p>
-      <div class="grid grid-3 gal">
-        <img src="https://images.unsplash.com/photo-1503951458645-643d53bfd90f?q=80&w=800&auto=format&fit=crop" alt="Look 1" />
-        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop" alt="Look 2" />
-        <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?q=80&w=800&auto=format&fit=crop" alt="Look 3" />
-        <img src="https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=800&auto=format&fit=crop" alt="Look 4" />
-        <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop" alt="Look 5" />
-        <img src="https://images.unsplash.com/photo-1510414696678-2415ad8474aa?q=80&w=800&auto=format&fit=crop" alt="Look 6" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== ABOUT ===== -->
-  <section id="about">
-    <div class="container">
-      <h2 class="section-title">हमारे बारे में</h2>
-      <div class="grid grid-2">
-        <div class="card">
-          <p class="muted">Shobha Beauty Studio में हम मानते हैं कि हर client unique है। हमारे artists आपके skin tone, outfit और occasion के हिसाब से लुक tailor करते हैं—ताकि pictures में भी और सामने से भी आप best दिखें।</p>
-          <ul class="muted" style="line-height:1.9;margin:10px 0 0 18px">
-            <li>Trained & experienced artists</li>
-            <li>Premium products (Huda, MAC, NARS, etc.)</li>
-            <li>Hygiene-first studio • On-location bookings</li>
-          </ul>
-        </div>
-        <div class="card">
-          <div class="chip">📍 Studio Location</div>
-          <p class="muted" style="margin:10px 0">Shop 12, XYZ Complex, Your City, UAE</p>
-          <iframe class="map" src="https://www.google.com/maps?q=Dubai&output=embed" loading="lazy" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CONTACT ===== -->
-  <section id="contact">
-    <div class="container">
-      <h2 class="section-title">बुकिंग / संपर्क</h2>
-      <p class="sub">कॉल, WhatsApp या फॉर्म से message करें—हम जल्दी reply करेंगे।</p>
-
-      <div class="contact-row">
-        <div class="card">
-          <form name="contact" method="post" onsubmit="event.preventDefault(); alert('धन्यवाद! हम जल्द संपर्क करेंगे.');">
-            <div class="row">
-              <div>
-                <label for="name">नाम</label>
-                <input id="name" name="name" placeholder="आपका नाम" required />
-              </div>
-              <div>
-                <label for="phone">मोबाइल</label>
-                <input id="phone" name="phone" placeholder="+971..." />
-              </div>
+                <!-- Contact & CTA -->
+                <div class="flex items-center space-x-4">
+                    <a 
+                        href="tel:+97143591532"
+                        class="hidden lg:flex items-center space-x-2 text-yellow-400 hover:text-white font-bold transition-colors"
+                    >
+                        <span>ðŸ“ž</span>
+                        <span>+971 4 359 1532</span>
+                    </a>
+                    <a 
+                        href="#book"
+                        class="btn-gold font-bold"
+                    >
+                        Book Now
+                    </a>
+                </div>
             </div>
-            <div style="margin-top:12px">
-              <label for="msg">मैसेज</label>
-              <textarea id="msg" name="message" rows="4" placeholder="अपनी जरूरत/तारीख लिखें..."></textarea>
-            </div>
-            <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-              <button class="btn" type="submit">Send Message</button>
-              <a class="btn outline" href="mailto:hello@shobhabeautystudio.com">Email Us</a>
-              <a class="btn outline" href="tel:+971000000000">Call Now</a>
-            </div>
-          </form>
         </div>
-        <div class="grid" style="gap:12px">
-          <div class="card">
-            <div class="chip">📞 कॉल</div>
-            <p class="muted" style="margin:8px 0"><a href="tel:+971000000000">+971 00 000 0000</a></p>
-          </div>
-          <div class="card">
-            <div class="chip">💬 WhatsApp</div>
-            <p class="muted" style="margin:8px 0"><a target="_blank" rel="noopener" href="https://wa.me/971000000000?text=Hi%20Shobha%20Beauty%20Studio">Chat on WhatsApp</a></p>
-          </div>
-          <div class="card">
-            <div class="chip">📧 ईमेल</div>
-            <p class="muted" style="margin:8px 0"><a href="mailto:hello@shobhabeautystudio.com">hello@shobhabeautystudio.com</a></p>
-          </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            
+            <!-- Beautiful Hero Image -->
+            <div class="mb-16">
+                <img 
+                    src="https://placehold.co/1400x800/000000/C6A664?text=Professional+Nail+Art+Showcase+Shobha+Beauty+Studio"
+                    alt="Professional Nail Art Showcase at Shobha Beauty Studio"
+                    class="w-full h-96 md:h-[500px] object-cover rounded-3xl shadow-2xl"
+                />
+            </div>
+            
+            <!-- Headlines -->
+            <h1 class="text-6xl md:text-8xl font-bold mb-8 bg-gradient-to-r from-white via-yellow-400 to-white bg-clip-text text-transparent">
+                Your Beauty Destination
+            </h1>
+            <h2 class="text-4xl md:text-5xl text-yellow-400 mb-8">
+                in Bur Dubai
+            </h2>
+            
+            <p class="text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
+                Experience premium beauty services at Shobha Beauty Studio & Nails in Meena Bazaar. 
+                Specializing in nail artistry, hair straightening, mehendi, and beauty transformations since 2011.
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <a href="#book" class="btn-gold text-2xl px-12 py-4">
+                    ðŸ“… Book Appointment
+                </a>
+                <a href="tel:+97143591532" class="btn-outline text-2xl px-12 py-4">
+                    ðŸ“ž Call Now
+                </a>
+            </div>
         </div>
-      </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-900 bg-opacity-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-white mb-16">
+                Our <span class="text-yellow-400">Services</span>
+            </h2>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-black bg-opacity-50 p-8 rounded-3xl border-2 border-gray-700 hover:border-yellow-400 hover:border-opacity-50 transition-all text-center">
+                    <div class="text-6xl mb-6">ðŸ’…</div>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Nails</h3>
+                    <p class="text-gray-300">Press-on nails, nail art, manicures</p>
+                </div>
+                
+                <div class="bg-black bg-opacity-50 p-8 rounded-3xl border-2 border-gray-700 hover:border-yellow-400 hover:border-opacity-50 transition-all text-center">
+                    <div class="text-6xl mb-6">ðŸ’‡â€â™€ï¸</div>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Hair</h3>
+                    <p class="text-gray-300">Straightening, blow dry, styling</p>
+                </div>
+                
+                <div class="bg-black bg-opacity-50 p-8 rounded-3xl border-2 border-gray-700 hover:border-yellow-400 hover:border-opacity-50 transition-all text-center">
+                    <div class="text-6xl mb-6">ðŸŽ¨</div>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Mehendi</h3>
+                    <p class="text-gray-300">Traditional & modern henna designs</p>
+                </div>
+                
+                <div class="bg-black bg-opacity-50 p-8 rounded-3xl border-2 border-gray-700 hover:border-yellow-400 hover:border-opacity-50 transition-all text-center">
+                    <div class="text-6xl mb-6">ðŸ‘°</div>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Bridal</h3>
+                    <p class="text-gray-300">Complete bridal packages</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    © <span id="y"></span> Shobha Beauty Studio • All rights reserved.
-  </footer>
+    <!-- Contact & Booking Section -->
+    <section id="book" class="py-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-5xl font-bold text-center text-white mb-16">
+                Visit Our <span class="text-yellow-400">Studio</span>
+            </h2>
+            
+            <div class="grid lg:grid-cols-2 gap-16">
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-6">
+                            <span class="text-4xl">ðŸ“</span>
+                            <div>
+                                <h3 class="text-2xl font-bold text-yellow-400">Location</h3>
+                                <p class="text-xl text-gray-300">Meena Bazaar, Bur Dubai, UAE</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-6">
+                            <span class="text-4xl">ðŸ“ž</span>
+                            <div>
+                                <h3 class="text-2xl font-bold text-yellow-400">Phone</h3>
+                                <a href="tel:+97143591532" class="text-xl text-white hover:text-yellow-400 font-bold">
+                                    +971 4 359 1532
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-6">
+                            <span class="text-4xl">âœ‰ï¸</span>
+                            <div>
+                                <h3 class="text-2xl font-bold text-yellow-400">Email</h3>
+                                <a href="mailto:Shobhabeautysaloon@gmail.com" class="text-xl text-white hover:text-yellow-400">
+                                    Shobhabeautysaloon@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-6">
+                            <span class="text-4xl">ðŸ•’</span>
+                            <div>
+                                <h3 class="text-2xl font-bold text-yellow-400">Hours</h3>
+                                <p class="text-xl text-gray-300">Daily: 10:00 AM - 10:00 PM</p>
+                                <p class="text-yellow-400 font-bold">Open 365 days a year</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-6">
+                            <span class="text-4xl">ðŸ“¸</span>
+                            <div>
+                                <h3 class="text-2xl font-bold text-yellow-400">Instagram</h3>
+                                <a href="https://instagram.com/shobhasaloon" target="_blank" class="text-xl text-white hover:text-yellow-400 font-bold">
+                                    @shobhasaloon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Booking Buttons -->
+                    <div class="space-y-4 pt-8">
+                        <a
+                            href="https://wa.me/97143591532?text=Hello!%20I%20would%20like%20to%20book%20an%20appointment%20at%20Shobha%20Beauty%20Studio.%20Please%20let%20me%20know%20your%20availability.%20Thank%20you!"
+                            target="_blank"
+                            class="block w-full btn-gold text-center text-xl py-4"
+                        >
+                            ðŸ’¬ WhatsApp Book Now
+                        </a>
+                        <a
+                            href="tel:+97143591532"
+                            class="block w-full btn-outline text-center text-xl py-4"
+                        >
+                            ðŸ“ž Call Directly
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Google Maps -->
+                <div class="h-96 rounded-3xl overflow-hidden">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.5441087465467!2d55.26834641501438!3d25.259869483905426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43348a67e24b%3A0xa5286883d5dd8594!2sMeena%20Bazaar%2C%20Bur%20Dubai%20-%20Dubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1634567890123!5m2!1sen!2s"
+                        width="100%"
+                        height="100%"
+                        style="border: 0;"
+                        allowfullscreen
+                        loading="lazy"
+                        title="Shobha Beauty Studio Location"
+                    ></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Floating WhatsApp -->
-  <a class="floating-wa btn" href="https://wa.me/971000000000?text=Hi%20Shobha%20Beauty%20Studio" target="_blank" rel="noopener">WhatsApp</a>
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-16 text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-center items-center space-x-4 mb-8">
+                <img 
+                    src="https://i.postimg.cc/YqtGN1NK/IMG-20250808-WA0128.jpg"
+                    alt="Shobha Beauty Studio Logo"
+                    class="h-16 w-16 object-contain rounded-xl bg-white bg-opacity-10 p-2"
+                />
+                <div>
+                    <h3 class="text-3xl font-bold text-white">Shobha Beauty Studio & Nails</h3>
+                    <p class="text-yellow-400 font-bold text-xl">Since 2011</p>
+                </div>
+            </div>
+            <p class="text-gray-300 text-xl mb-4">Your trusted beauty destination in Bur Dubai, specializing in nail artistry and complete beauty transformations.</p>
+            <p class="text-gray-400">&copy; 2024 Shobha Beauty Studio & Nails. All rights reserved.</p>
+            <p class="text-yellow-400 font-bold text-2xl mt-4">ðŸŒ www.shobhabeautystudio.com</p>
+        </div>
+    </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-
